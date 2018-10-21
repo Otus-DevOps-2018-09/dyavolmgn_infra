@@ -1,14 +1,17 @@
-#!/bin/sh
+S#!/bin/sh
 echo "Starting mongodb installation ..."
 echo "Applying key for mongodb repo ..."
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 echo "Trying to add mongodb repo to sources list..."
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.2.list
 echo "Checking for package index update ..."
-apt-get update
+apt update
 echo "Going to install mongodb"
-apt-get install -y mongodb-org
-echo "Starting MONGODB ..."
-systemctl start mongod
-echo -e "enable MONGODB ..."
+apt install -y mongodb-org
+echo -e "Installed!\nSystemd service startup turning on ..."
 systemctl enable mongod
+echo "Starting database service ..."
+systemctl start mongod
+echo "Checking status ..."
+systemctl status mongod
+echo "Success!"
