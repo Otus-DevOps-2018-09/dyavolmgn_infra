@@ -1,0 +1,6 @@
+{ 
+    "proj_id": "derp-666",
+    "ssh_user": "derp",
+    "src_image_family": "ubuntu-16.04",
+    "machine_type": "f1-micro"
+}
