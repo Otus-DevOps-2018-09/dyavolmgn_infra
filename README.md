@@ -6,7 +6,6 @@ dyavolmgn Infra repository
 1. ssh в одну команду.
 ssh 10.142.0.2 -o "proxycommand ssh -W %h:%p  104.199.93.123"
 
-
 2.  ssh someinternalhost
 add  ~/.ssh/config
 
@@ -35,7 +34,6 @@ testapp_port = 9292
 
 ##  GCP cread VM
 Создание инстанса
-
 ```
 gcloud compute instances create reddit-app \ 
  --boot-disk-size=10GB \ 
