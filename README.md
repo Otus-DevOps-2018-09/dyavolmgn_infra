@@ -2,7 +2,6 @@
 dyavolmgn Infra repository
 
 ------
-
 Самостоятельное задание:
 1. ssh в одну команду.
 ssh 10.142.0.2 -o "proxycommand ssh -W %h:%p  104.199.93.123"
@@ -30,7 +29,6 @@ someinternalhost - host в локальной сети, без доступа и
 Достув на ВМ по ssh_key.
 
 ------
-
 testapp_IP = 130.211.103.253
 testapp_port = 9292
 
