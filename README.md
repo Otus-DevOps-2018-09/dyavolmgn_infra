@@ -2,6 +2,22 @@
 dyavolmgn Infra repository
 
 ------
+### Terraform 1
+Создан шаблон terraform.
+Развертывание инстанса reddit-app, и управление конфигурацией.
+Создан шаблон для firewall-а.
+Шаблоны параметризованны.
+
+##Задание со *
+доступ к узлу:
+ssh -i ~/.ssh/appuser appuser@HOST_IP
+ssh -i ~/.ssh/appuser appuser1@HOST_IP
+ssh -i ~/.ssh/appuser appuser2@HOST_IP
+
+##Задание с **
+Создан load-balancer перенаправляющий запросы со своего ип на один из инстансов.
+
+------
 Самостоятельное задание:
 1. ssh в одну команду.
 ssh 10.142.0.2 -o "proxycommand ssh -W %h:%p  104.199.93.123"
