@@ -33,20 +33,3 @@ variable zone {
   description = "Zone"
   default     = "europe-west1-b"
 }
-
-#variable num_of_apps {
-#  description = "number of instances"
-#  default     = 2
-#}
-
-
-#variable "instance_names" {
-#  description = "Names for created several instances"
-
-
-#  default = {
-#    "0" = "reddit-app"
-#    "1" = "reddit-app2"
-#  }
-#}
-
