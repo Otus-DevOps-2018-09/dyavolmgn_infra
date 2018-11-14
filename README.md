@@ -1,6 +1,12 @@
 # dyavolmgn_infra
 dyavolmgn Infra repository
 
+
+##Ansible-1
+
+###Простой плейбук
+* ansible-playbook clone.yml - слонирует репозиторий, когда его нет. В случае если он есть то выполнение таска пропускается. 
+
 ## Terraform 2
 
 * Созданы модули и оптимизированы. 
