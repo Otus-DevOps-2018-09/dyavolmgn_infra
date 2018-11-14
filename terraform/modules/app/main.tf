@@ -35,7 +35,7 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "remote-exec" {
-    script       = "files/deploy.sh"
+    script = "files/deploy.sh"
   }
 }
 
