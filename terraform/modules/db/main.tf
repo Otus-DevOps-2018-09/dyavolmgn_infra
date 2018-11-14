@@ -31,4 +31,16 @@ resource "google_compute_instance" "db" {
   metadata {
     ssh-keys = "appuser:${file(var.public_key_path)}"
   }
+
+  connection {
+    type        = "ssh"
+    user        = "appuser"
+    agent       = false
+    timeout     = "3m"
+    private_key = "${file(var.private_key_path)}"
+  }
+
+  provisioner "remote-exec" {
+    script = "${path.module}/files/mongo_change.sh"
+  }
 }
