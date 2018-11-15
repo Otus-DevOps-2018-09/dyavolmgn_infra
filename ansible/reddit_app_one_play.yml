@@ -41,7 +41,7 @@
         dest: /home/appuser/reddit
         version: monolith
       tags: deploy-tag
-      notify: reload puma
+      notify: restart puma
  
     - name: Bundle install
       bundler:
@@ -55,6 +55,10 @@
       service: name=mongod state=restarted
     
     - name: reload puma
+      become: true
+      systemd: name=puma state=restarted
+
+    - name: restart puma
       become: true
       systemd: name=puma state=restarted
   
