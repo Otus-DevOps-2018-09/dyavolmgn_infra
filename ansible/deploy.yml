@@ -1,7 +1,6 @@
 ---
 - name: Deploy App
   hosts: app
-#  tags: deploy-tag
   tasks:
     - name: Fetch the latest version of application code
       git:
@@ -19,4 +18,3 @@
   - name: restart puma
     become: true
     systemd: name=puma state=restarted daemon_reload=yes
-    

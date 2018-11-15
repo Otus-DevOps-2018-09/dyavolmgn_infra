@@ -45,7 +45,7 @@
 
   handlers:
     - name: reload puma
-      systemd: name=puma state=restarted daemon_reload=yes
+      systemd: name=puma state=restarted
   
 - name: Deploy App
   hosts: app
@@ -66,5 +66,4 @@
   handlers:
   - name: restart puma
     become: true
-    systemd: name=puma state=restarted daemon_reload=yes
-    
+    systemd: name=puma state=restarted
