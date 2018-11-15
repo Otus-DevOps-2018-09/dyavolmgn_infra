@@ -12,7 +12,6 @@
         src: templates/mongod.conf.j2
         dest: /etc/mongod.conf
         mode: 0644
-        backup: yes
       tags: db-tag
       notify: restart mongod
 
