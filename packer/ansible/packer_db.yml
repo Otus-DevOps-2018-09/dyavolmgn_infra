@@ -23,4 +23,3 @@
     
     - name: Enable mongoDB service
       systemd: name=mongod enabled=yes
-
