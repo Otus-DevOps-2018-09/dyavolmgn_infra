@@ -1,10 +1,16 @@
 # dyavolmgn_infra
 dyavolmgn Infra repository
 
+## Ansible-2
 
-##Ansible-1
+### Практика
+ - Создал плейбуки, установил тэги. 
+ - Создал мультиплейбук
+ - Создал плейбук site.yml, добавив в него импорт app.yml, db.yml и deploy.yml 
 
-###Простой плейбук
+## Ansible-1
+
+### Простой плейбук
 * ansible-playbook clone.yml - слонирует репозиторий, когда его нет. В случае если он есть то выполнение таска пропускается. 
 
 ## Terraform 2
