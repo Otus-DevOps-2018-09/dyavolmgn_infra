@@ -3,6 +3,7 @@
   hosts: all
   vars:
     mongo_bind_ip: 0.0.0.0
+    db_host: 10.132.0.3
 
   tasks:
     - name: Change mongo config file
@@ -21,7 +22,7 @@
         dest: /etc/systemd/system/puma.service
       tags: app-tag
       notify: reload puma
-    
+
     - name: Add config for DB connection
       template:
         src: templates/db_config.j2
@@ -40,7 +41,7 @@
         version: monolith
       tags: deploy-tag
       notify: reload puma
- 
+
     - name: Bundle install
       bundler:
         state: present
@@ -51,8 +52,7 @@
     - name: restart mongod
       become: true
       service: name=mongod state=restarted
-    
+
     - name: reload puma
       become: true
       systemd: name=puma state=restarted
- 
