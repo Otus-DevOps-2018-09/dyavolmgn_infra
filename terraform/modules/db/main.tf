@@ -40,7 +40,7 @@ resource "google_compute_instance" "db" {
     private_key = "${file(var.private_key_path)}"
   }
 
-  provisioner "remote-exec" {
-    script = "${path.module}/files/mongo_change.sh"
-  }
+#  provisioner "remote-exec" {
+#    script = "${path.module}/files/mongo_change.sh"
+#  }
 }
