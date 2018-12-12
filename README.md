@@ -3,6 +3,14 @@ dyavolmgn Infra repository
 
 ## Ansible-2
 ### Практика
+ - Разнесли код по ролям
+ - add role nginx, add proxy_pass 80 ---> 9292
+ - add playbook users
+
+
+## Ansible-2
+
+### Практика
  - Создал плейбуки, установил тэги. 
  - Создал мультиплейбук
  - Создал плейбук site.yml, добавив в него импорт app.yml, db.yml и deploy.yml 
