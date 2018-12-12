@@ -2,12 +2,12 @@
 dyavolmgn Infra repository
 
 ## Ansible-2
-
 ### Практика
  - Создал плейбуки, установил тэги. 
  - Создал мультиплейбук
  - Создал плейбук site.yml, добавив в него импорт app.yml, db.yml и deploy.yml 
  - Add provisioners from app and db packet deploy.
+
 ## Ansible-1
 
 ### Простой плейбук
